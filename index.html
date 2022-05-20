@@ -1,164 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | E-commerce product page</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-</head>
-<body>
-
-  <main>
-
-    <div id="header">
-
-      <div id="header-left">
-        <img id="menu-icon" src="images/icon-menu.svg" onclick="openMenu()">
-        <div id="title">
-          <p>s</p><p>n</p><p>e</p><p>a</p><p>k</p><p>e</p><p>r</p><p>s</p>
-        </div>
-        <div class="nav-button">Collections</div>
-        <div class="nav-button">Men</div>
-        <div class="nav-button">Women</div>
-        <div class="nav-button">About</div>
-        <div class="nav-button">Contact</div>
-      </div>
-
-      <div id="header-right">
-        <div id="cart-icon-container" onclick="openCart();event.stopPropagation();">
-          <img id="cart-icon" src="images/icon-cart.svg">
-          <div id="cart-badge"></div>
-        </div>
-
-        
-
-        <img id="avatar-icon" src="images/image-avatar.png">
-      </div>
-
-    </div>
-
-    <hr id="header-hr">
-
-    <div id="product">
-      <div id="product-left">
-
-        
-        
-        <div id="product-image-container">
-          <img id="mobile-previous-icon" src="images/icon-previous.svg" onclick="previousMobilePImage()">
-          <img id="product-image" src="images/image-product-1.jpg" onclick="openLB()">
-          <img id="mobile-next-icon" src="images/icon-next.svg" onclick="nextMobilePImage()">
-        </div>
-        
-        <div id="thumbnail-container">
-          <img class="thumbnail" id="thumb-1" src="images/image-product-1-thumbnail.jpg" onclick="selectThumb(event)">
-          <img class="thumbnail" id="thumb-2" src="images/image-product-2-thumbnail.jpg" onclick="selectThumb(event)">
-          <img class="thumbnail" id="thumb-3" src="images/image-product-3-thumbnail.jpg" onclick="selectThumb(event)">
-          <img class="thumbnail" id="thumb-4" src="images/image-product-4-thumbnail.jpg" onclick="selectThumb(event)">
-        </div>
-      </div>
-      
-      <div id="product-right">
-        <p id="company">SNEAKER COMPANY</p>
-        <p id="product-name">Fall Limited Edition Sneakers</p>
-        <p id="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-        <div id="price-container">
-          <p id="price">$125.00</p>
-          <p id="discount">50%</p>
-          <p id="original-price-mobile">$250.00</p>
-        </div>
-        <p id="original-price">$250.00</p>
-        <div id="quantity-container">
-          <button id="minus-button" onclick="minus()">
-            <img id="minus" src="images/icon-minus.svg">
-          </button>
-          <button id="quantity">1</button>
-          <button id="plus-button" onclick="plus()">
-            <img id="plus" src="images/icon-plus.svg">
-          </button>
-          <div></div>
-          <button id="add-button" onclick="addToCart()">
-            <img id="cart-icon-2" src="images/icon-cart-white.svg">
-            <p id="add-text">Add to cart</p>
-          </button>
-        </div>
-        <button id="add-button-mobile" onclick="addToCart()">
-          <img id="cart-icon-2" src="images/icon-cart-white.svg">
-          <p id="add-text">Add to cart</p>
-        </button>
-      </div>
-    </div>
-
-    <div id="cart" onclick="event.stopPropagation()">
-      <div id="cart-header">Cart</div>
-      <hr id="cart-hr">
-      <div id="cart-empty">Your cart is empty.</div>
-      <div id="cart-filled">
-        <div id="cart-filled-content">
-        <img id="cart-product-image" src="images/image-product-1-thumbnail.jpg">
-        <div id="cart-text-container">
-          <div id="cart-text-container-top">
-              <p id="cart-product-name">Fall Limited Edition Sneakers</p>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- displays site properly based on user's device -->
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <title>Frontend Mentor | E-commerce product page</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <main>
+         <div id="header">
+            <div id="header-left">
+               <img id="menu-icon" src="images/icon-menu.svg" onclick="openMenu()">
+               <div id="title">
+                  <p>s</p>
+                  <p>n</p>
+                  <p>e</p>
+                  <p>a</p>
+                  <p>k</p>
+                  <p>e</p>
+                  <p>r</p>
+                  <p>s</p>
+               </div>
+               <div class="nav-button">Collections</div>
+               <div class="nav-button">Men</div>
+               <div class="nav-button">Women</div>
+               <div class="nav-button">About</div>
+               <div class="nav-button">Contact</div>
             </div>
-            <div id="cart-text-container-bottom">
-              <p id="cart-price">$125.00 ×&nbsp</p>
-              <p id="cart-quantity"></p>
-              <p id="cart-total"></p>
+            <div id="header-right">
+               <div id="cart-icon-container" onclick="openCart();event.stopPropagation();">
+                  <img id="cart-icon" src="images/icon-cart.svg">
+                  <div id="cart-badge"></div>
+               </div>
+               <img id="avatar-icon" src="images/image-avatar.png">
             </div>
-          </div>
-          <img id="cart-delete" src="images/icon-delete.svg" onclick="deleteCart()">
-        </div>
-        <div id="checkout">
-          <p id="checkout-text">Checkout</p>
-        </div>
+         </div>
+         <hr id="header-hr">
+         <div id="product">
+            <div id="product-left">
+               <div id="product-image-container">
+                  <img id="mobile-previous-icon" src="images/icon-previous.svg" onclick="previousMobilePImage()">
+                  <img id="product-image" src="images/image-product-1.jpg" onclick="openLB()">
+                  <img id="mobile-next-icon" src="images/icon-next.svg" onclick="nextMobilePImage()">
+               </div>
+               <div id="thumbnail-container">
+                  <img class="thumbnail" id="thumb-1" src="images/image-product-1-thumbnail.jpg" onclick="selectThumb(event)">
+                  <img class="thumbnail" id="thumb-2" src="images/image-product-2-thumbnail.jpg" onclick="selectThumb(event)">
+                  <img class="thumbnail" id="thumb-3" src="images/image-product-3-thumbnail.jpg" onclick="selectThumb(event)">
+                  <img class="thumbnail" id="thumb-4" src="images/image-product-4-thumbnail.jpg" onclick="selectThumb(event)">
+               </div>
+            </div>
+            <div id="product-right">
+               <p id="company">SNEAKER COMPANY</p>
+               <p id="product-name">Fall Limited Edition Sneakers</p>
+               <p id="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a
+                  durable rubber outer sole, they'll withstand everything the weather can offer.
+               </p>
+               <div id="price-container">
+                  <p id="price">$125.00</p>
+                  <p id="discount">50%</p>
+                  <p id="original-price-mobile">$250.00</p>
+               </div>
+               <p id="original-price">$250.00</p>
+               <div id="quantity-container">
+                  <button id="minus-button" onclick="minus()">
+                  <img id="minus" src="images/icon-minus.svg">
+                  </button>
+                  <button id="quantity">1</button>
+                  <button id="plus-button" onclick="plus()">
+                  <img id="plus" src="images/icon-plus.svg">
+                  </button>
+                  <div></div>
+                  <button id="add-button" onclick="addToCart()">
+                     <img id="cart-icon-2" src="images/icon-cart-white.svg">
+                     <p id="add-text">Add to cart</p>
+                  </button>
+               </div>
+               <button id="add-button-mobile" onclick="addToCart()">
+                  <img id="cart-icon-2" src="images/icon-cart-white.svg">
+                  <p id="add-text">Add to cart</p>
+               </button>
+            </div>
+         </div>
+         <div id="cart" onclick="event.stopPropagation()">
+            <div id="cart-header">Cart</div>
+            <hr id="cart-hr">
+            <div id="cart-empty">Your cart is empty.</div>
+            <div id="cart-filled">
+               <div id="cart-filled-content">
+                  <img id="cart-product-image" src="images/image-product-1-thumbnail.jpg">
+                  <div id="cart-text-container">
+                     <div id="cart-text-container-top">
+                        <p id="cart-product-name">Fall Limited Edition Sneakers</p>
+                     </div>
+                     <div id="cart-text-container-bottom">
+                        <p id="cart-price">$125.00 ×&nbsp</p>
+                        <p id="cart-quantity"></p>
+                        <p id="cart-total"></p>
+                     </div>
+                  </div>
+                  <img id="cart-delete" src="images/icon-delete.svg" onclick="deleteCart()">
+               </div>
+               <div id="checkout">
+                  <p id="checkout-text">Checkout</p>
+               </div>
+            </div>
+         </div>
+         <div id="menu-lightbox" onclick="closeMenu()"></div>
+         <div id="menu">
+            <img id="close-menu-icon" src="images/icon-close-grey.svg" onclick="closeMenu()">
+            <div class="menu-nav-button">Collections</div>
+            <div class="menu-nav-button">Men</div>
+            <div class="menu-nav-button">Women</div>
+            <div class="menu-nav-button">About</div>
+            <div class="menu-nav-button">Contact</div>
+         </div>
+         </div>
+      </main>
       </div>
-    </div>
-
-    <div id="menu-lightbox" onclick="closeMenu()"></div>
-      <div id="menu">
-        <img id="close-menu-icon" src="images/icon-close-grey.svg" onclick="closeMenu()">
-        <div class="menu-nav-button">Collections</div>
-        <div class="menu-nav-button">Men</div>
-        <div class="menu-nav-button">Women</div>
-        <div class="menu-nav-button">About</div>
-        <div class="menu-nav-button">Contact</div>
+      <div id="lightbox" onclick="closeLB()">
+         <img id="close-lb-icon" src="images/icon-close.svg">
+         <div id="lb-center">
+            <img id="previous-icon" src="images/icon-previous.svg" onclick="previousLB();event.stopPropagation();">
+            <img id="lb-product-image" src="images/image-product-1.jpg" onclick="event.stopPropagation();">
+            <img id="next-icon" src="images/icon-next.svg" onclick="nextLB();event.stopPropagation();">
+         </div>
+         <div id="lb-thumbnail-container">
+            <img class="lb-thumbnail" id="lb-thumb-1" src="images/image-product-1-thumbnail.jpg"
+               onclick="selectLBThumb(event);event.stopPropagation();">
+            <img class="lb-thumbnail" id="lb-thumb-2" src="images/image-product-2-thumbnail.jpg"
+               onclick="selectLBThumb(event);event.stopPropagation();">
+            <img class="lb-thumbnail" id="lb-thumb-3" src="images/image-product-3-thumbnail.jpg"
+               onclick="selectLBThumb(event);event.stopPropagation();">
+            <img class="lb-thumbnail" id="lb-thumb-4" src="images/image-product-4-thumbnail.jpg"
+               onclick="selectLBThumb(event);event.stopPropagation();">
+         </div>
       </div>
-    </div>
-
-  </main>
-
- 
-
-  </div>
-
-  <div id="lightbox" onclick="closeLB()">
-    <img id="close-lb-icon" src="images/icon-close.svg">
-    <div id="lb-center">
-      <img id="previous-icon" src="images/icon-previous.svg" onclick="previousLB();event.stopPropagation();">
-      <img id="lb-product-image" src="images/image-product-1.jpg" onclick="event.stopPropagation();">
-      <img id="next-icon" src="images/icon-next.svg" onclick="nextLB();event.stopPropagation();">
-    </div>
-    <div id="lb-thumbnail-container">
-      <img class="lb-thumbnail" id="lb-thumb-1" src="images/image-product-1-thumbnail.jpg" onclick="selectLBThumb(event);event.stopPropagation();">
-      <img class="lb-thumbnail" id="lb-thumb-2" src="images/image-product-2-thumbnail.jpg" onclick="selectLBThumb(event);event.stopPropagation();">
-      <img class="lb-thumbnail" id="lb-thumb-3" src="images/image-product-3-thumbnail.jpg" onclick="selectLBThumb(event);event.stopPropagation();">
-      <img class="lb-thumbnail" id="lb-thumb-4" src="images/image-product-4-thumbnail.jpg" onclick="selectLBThumb(event);event.stopPropagation();">
-    </div>
-  </div>
-
-  
-
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Scott Freedman</a>.
-  </div>
-
-<script src="script.js"></script>
-</body>
+      <div class="attribution">
+         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+         Coded by <a href="#">Scott Freedman</a>.
+      </div>
+      <script src="script.js"></script>
+   </body>
 </html>
